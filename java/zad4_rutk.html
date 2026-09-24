@@ -1,50 +1,33 @@
 <html> 
      <head> 
             <title> Rutkowski 2P</title> 
-          <style>
-              h1 {
-                  color: red;
-                  font-size: 2cm;
-                  font-weight: bold;
-                  margin-bottom: 20px;
-              }
-          </style>
           <script language="JavaScript"> 
-             function WinOpen_z1()  
-               { 
-                 window.open("https://lisfox8.github.io/java/java/zad1_rutk.html","okienko_z1","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200"); 
-               } 
-            function WinOpen_z2()  
-               { 
-                 window.open("https://lisfox8.github.io/java/java/zad2_rutk.html","okienko_z2","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200"); 
-               } 
              function WinOpen_z3()  
                { 
-                 window.open("https://lisfox8.github.io/java/java/zad3_rutk.html","okienko_z3","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200"); 
+window.open("zad3_rutk.html","okienko_z3","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200"); 
                } 
-             function WinOpen_z4()  
+function WinOpen_z4()  
                { 
-                 window.open("https://lisfox8.github.io/java/java/z4_rut.html","okienko_z4","toolbar=no,directories=no,menubar=no,height=900,width=500,top=200,left=400"); 
+window.open("z4_rut.html","okienko_z4","toolbar=no,directories=no,menubar=no,height=800,width=1400,top=200,left=400"); 
                } 
-             function WinOpen_z5()  
+               function WinOpen_z5()  
                { 
-                 window.open("https://lisfox8.github.io/java/java/zad5_rutk.html","okienko_z5","toolbar=no,directories=no,menubar=no,height=500,width=900,top=200,left=300"); 
+window.open("zad5_rutk.html","okienko_z5","toolbar=no,directories=no,menubar=no,height=500,width=900,top=200,left=400"); 
                } 
-             function okno_zamknij()  
-               { 
-                 window.close(); 
-               } 
+function okno_zamknij()  
+                       { 
+                             window.close() 
+                       } 
           </script> 
       </head> 
 <body> 
-   <h1>Szkielet zaliczeniowy JavaScript Bartosz Rutkowski klasa 2P</h1>
-
+    <script>
+    document.write("<span style='font-size: 2cm;color: red;'>Szkielet zaliczeniowy JavaScript Bartosz Rutkowski klasa 2P<br></span>");
+    </script>
    <form> 
-        <input type="button_z1" name="zadanie1" value="zadanie1-rutkowski" onclick="WinOpen_z1(' ')"> 
-        <input type="button_z2" name="zadanie2" value="zadanie2-rutkowski" onclick="WinOpen_z2(' ')"> 
         <input type="button_z3" name="zadanie3" value="zadanie3-rutkowski" onclick="WinOpen_z3(' ')"> 
         <input type="button_z4" name="zadanie4" value="zadanie4-rutkowski" onclick="WinOpen_z4(' ')"> 
-        <input type="button_z5" name="zadanie5" value="zadanie5-rutkowski" onclick="WinOpen_z5(' ')">
+        <input type="button_z5" name="zadanie5" value="zadanie5-rutkowski" onclick="WinOpen_z5(' ')"> 
         <input type="button" value="zamknij okno" onclick="okno_zamknij()"/> 
     </form> 
 </body> 

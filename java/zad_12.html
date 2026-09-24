@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Rutkowski 2P</title>
+    </head>
+    <body>
+        <div style="color:red; font-size:50px;">
+            <script language="JavaScript">
+                var D1_rut = prompt("Data1>Data2 Data1=", "");
+                var G1_rut = prompt("Godzina1>Godzina2 Godzina1=", "");
+                var D2_rut = prompt("Data1>Data2 Data2=", "");
+                var G2_rut = prompt("Godzina1>Godzina2 Godzina2=", "");
+                var ile_sekund_rut;
+                var D1_rut = parseFloat(D1_rut);
+                var G1_rut = parseFloat(G1_rut);
+                var D2_rut = parseFloat(D2_rut);
+                var G2_rut = parseFloat(G2_rut);
+                ile_sekund_rut = ((D1_rut-D2_rut)*24+G1_rut-G2_rut)*3600;
+                document.write("D1=" + D1_rut + " D2=" + D2_rut + "<br>");
+                document.write("Ilość sekund między dniami " + D1_rut + " i " + D2_rut + " to " + ile_sekund_rut + " s" + "<br>");
+            </script>
+        </div>
+    </body>
+</html>
