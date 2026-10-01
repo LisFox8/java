@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+<title> Użycie fukcji </title>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:navy;font-size:50px;">
+<script language="JavaScript">
+var a=parseFloat(prompt("a=",""));
+var b=parseFloat(prompt("b=",""));
+function suma_rut(a, b) {
+return a + b;
+}
+function odejmowanie_rut(a, b) {
+return a - b;
+}
+function mnozenie_rut(a, b) {
+return a * b;
+}
+function od_kwadratu_rut(a) {
+return a*a;
+}
+function od_kwadratu2_rut(b) {
+return b*b;
+}
+function reszta_z_dzielenia_rut(a, b) {
+return a % b;
+}
+document.write("suma="+suma_rut(a,b)+"<br>");
+document.write("odejmowanie="+odejmowanie_rut(a,b)+"<br>");
+document.write("mnozenie="+mnozenie_rut(a,b)+"<br>");
+document.write(a+"^2="+od_kwadratu_rut(a)+"<br>");
+document.write(b+"^2="+od_kwadratu2_rut(b)+"<br>");
+document.write("reszta_z_dzielenia="+reszta_z_dzielenia_rut(a,b)+"<br>");
+</script>
+</div>
+</body>
+</html>
