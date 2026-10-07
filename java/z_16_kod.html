@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+
+<body>
+<textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>proste obliczenia</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div style="color:red;font-size:50px;">
+        <script language="JavaScript">
+            var liczba1=prompt("A=","");
+            var A_rut=parseFloat(liczba1);
+            var liczba2=prompt("B=","");
+            var B_rut=parseFloat(liczba2);
+            document.write("A="+A_rut+" "+"B="+B_rut+"<br>");
+            document.write("("+A_rut+" + "+B_rut+")^3="+A_rut+"^3 + 3*(("+A_rut+")^"+A_rut+")*("+B_rut+") + 3*("+A_rut+")*(("+B_rut+")^2) + "+B_rut+"^3 = ");
+            document.write((Math.pow(A_rut, 3)) + " + " + 3*(Math.pow(A_rut, 2)*B_rut) + " + " + 3*(A_rut*Math.pow(B_rut, 2)) + " + " + Math.pow(B_rut, 3) + " = <br>");
+            document.write((Math.pow(A_rut + B_rut, 3)));
+        </script>
+    </div>
+</body>
+</html>
+
+</textarea>
+</body>
+
+</html>
