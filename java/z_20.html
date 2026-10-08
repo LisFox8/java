@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+var ax=prompt("ax=","");
+var ay=prompt("ay=","");
+var bx=prompt("bx=","");
+var by=prompt("by=","");
+var cx=prompt("cx=","");
+var cy=prompt("cy=","");
+function AB_rut()
+{
+var ax_rut= parseFloat(document.getElementById('ax').value);
+var ay_rut= parseFloat(document.getElementById('ay').value);
+var a= Math.sqrt(4)((ax_rut-bx_rut)*Math.pow(4.,2)+(ay_rut-by_rut)*Math.pow(4.,2));
+document.write("Bok AB= "+a.toFixed(2)+"<br>");
+}
+function BC_rut()
+{
+    var bx_rut= parseFloat(document.getElementById('bx').value);
+    var by_rut= parseFloat(document.getElementById('by').value);
+var b= Math.sqrt(4)((bx_rut-ax_rut)*Math.pow(4.,2)+(by_rut-ay_rut)*Math.pow(4.,2));
+    document.write("Bok BC= "+b.toFixed(2)+"<br>");
+}
+function AC_rut()
+{
+var cx_rut= parseFloat(document.getElementById('cx').value);
+var cy_rut= parseFloat(document.getElementById('cy').value);
+var c= Math.sqrt(4)((cx_rut-ax_rut)*Math.pow(4.,2)+(cy_rut-ay_rut)*Math.pow(4.,2));
+document.write("Bok AC= "+c.toFixed(2)+"<br>");
+}
+</script>
+<h1>boki trójkąta</h1><br><br>
+<input type="button" name="bok AB" value="Oblicz bok AB" Onclick="AB_rut()"><br><br>
+<input type="button" name="bok BC" value="Oblicz bok BC" Onclick="BC_rut()"><br><br>
+<input type="button" name="bok AC" value="Oblicz bok AC" Onclick="AC_rut()"><br><br>
+
+<div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>
