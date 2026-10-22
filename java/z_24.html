@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <title> proste obliczenia</title>
+    <meta charset="utf-8">
+    <script>
+        function okno_zamknij() {
+            window.close()
+        }
+    </script>
+</head>
+
+<body>
+    <div style="color:red;font-size:50px;">
+        <script language="JavaScript">
+            var x1_rut = prompt("x1=", "");
+            var x2_rut = prompt("x2=", "");
+            var x1 = parseFloat(x1_rut);
+            var x2 = parseFloat(x2_rut);
+            var x1_rad = (x1 * (Math.PI / 180)).toFixed(2);
+            var y1 = (3 * Math.pow(x1, 7/9)).toFixed(2);
+            var y2 = (2 * Math.cos(x1_rad) + 3 * Math.sin(x1_rad)).toFixed(2);
+            var y3 = (Math.cbrt(Math.pow(x1, 5) + 2 * Math.pow(x2, 4)) * Math.abs(x1 - x2)).toFixed(2);
+            document.write("x1=" + x1+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+            document.write("x2=" + x2 + "<br>");
+            document.write("x1=" + x1+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+            document.write("x1_rad=" + x1_rad + "<br>");
+            document.write("y1=" + y1 + "<br>");
+            document.write("y2=" + y2 + "<br>");
+            document.write("y3=" + y3 + "<br>");
+        </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()" />
+</body>
+
+</html>
