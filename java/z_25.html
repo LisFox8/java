@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <title>Zadanie 25</title>
+    <meta charset="utf-8">
+    <script>
+        function okno_zamknij() {
+            window.close()
+        }
+    </script>
+</head>
+<body>
+    <div style="color: #000080; font-size: 22px;">
+        <script language="JavaScript">
+            var N0_rut = prompt("N0=", "");
+            var t_rut = prompt("t=", "");
+            var T12_rut = prompt("T1/2=", "");
+            
+            var N0 = parseFloat(N0_rut);
+            var t = parseFloat(t_rut);
+            var T12 = parseFloat(T12_rut);
+
+            var lambda = (Math.log(2) / T12).toFixed(7);
+            var N = N0 * Math.exp(-lambda * t);
+
+            document.write("N0=" + N0 + "[sztuk]<br>");
+            document.write("t=" + t + "[lat]<br>");
+            document.write("T1/2=" + T12 + "[lat]<br>");
+            document.write("Lambda=" + lambda + "[1/rok]<br>");
+            document.write("N=" + N + "[sztuk]<br>");
+        </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()" />
+</body>
+</html>

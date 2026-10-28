@@ -1,43 +1,56 @@
-<html>
+<!DOCTYPE html>
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="styl.css">
+    <title>Zadanie 20</title>
+    <meta charset="utf-8">
+    <script>
+        function AB_rut() {
+            var xa = parseFloat(document.getElementById('xa_id').value);
+            var ya = parseFloat(document.getElementById('ya_id').value);
+            var xb = parseFloat(document.getElementById('xb_id').value);
+            var yb = parseFloat(document.getElementById('yb_id').value);
+            
+            var ab = Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+            document.getElementById('wynik').innerHTML = "Długość boku AB = " + ab.toFixed(2);
+        }
+
+        function BC_rut() {
+            var xb = parseFloat(document.getElementById('xb_id').value);
+            var yb = parseFloat(document.getElementById('yb_id').value);
+            var xc = parseFloat(document.getElementById('xc_id').value);
+            var yc = parseFloat(document.getElementById('yc_id').value);
+            
+            var bc = Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+            document.getElementById('wynik').innerHTML = "Długość boku BC = " + bc.toFixed(2);
+        }
+
+        function AC_rut() {
+            var xa = parseFloat(document.getElementById('xa_id').value);
+            var ya = parseFloat(document.getElementById('ya_id').value);
+            var xc = parseFloat(document.getElementById('xc_id').value);
+            var yc = parseFloat(document.getElementById('yc_id').value);
+            
+            var ac = Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+            document.getElementById('wynik').innerHTML = "Długość boku AC = " + ac.toFixed(2);
+        }
+
+        function okno_zamknij() {
+            window.close()
+        }
+    </script>
 </head>
 <body>
-<script type="text/javascript">
-var ax=prompt("ax=","");
-var ay=prompt("ay=","");
-var bx=prompt("bx=","");
-var by=prompt("by=","");
-var cx=prompt("cx=","");
-var cy=prompt("cy=","");
-function AB_rut()
-{
-var ax_rut= parseFloat(document.getElementById('ax').value);
-var ay_rut= parseFloat(document.getElementById('ay').value);
-var a= Math.sqrt(4)((ax_rut-bx_rut)*Math.pow(4.,2)+(ay_rut-by_rut)*Math.pow(4.,2));
-document.write("Bok AB= "+a.toFixed(2)+"<br>");
-}
-function BC_rut()
-{
-    var bx_rut= parseFloat(document.getElementById('bx').value);
-    var by_rut= parseFloat(document.getElementById('by').value);
-var b= Math.sqrt(4)((bx_rut-ax_rut)*Math.pow(4.,2)+(by_rut-ay_rut)*Math.pow(4.,2));
-    document.write("Bok BC= "+b.toFixed(2)+"<br>");
-}
-function AC_rut()
-{
-var cx_rut= parseFloat(document.getElementById('cx').value);
-var cy_rut= parseFloat(document.getElementById('cy').value);
-var c= Math.sqrt(4)((cx_rut-ax_rut)*Math.pow(4.,2)+(cy_rut-ay_rut)*Math.pow(4.,2));
-document.write("Bok AC= "+c.toFixed(2)+"<br>");
-}
-</script>
-<h1>boki trójkąta</h1><br><br>
-<input type="button" name="bok AB" value="Oblicz bok AB" Onclick="AB_rut()"><br><br>
-<input type="button" name="bok BC" value="Oblicz bok BC" Onclick="BC_rut()"><br><br>
-<input type="button" name="bok AC" value="Oblicz bok AC" Onclick="AC_rut()"><br><br>
+    <h3>Obliczanie długości boków trójkąta</h3>
+    <form>
+        Podaj punkt A: xa_rut = <input type="text" id="xa_id" size="5"> ya_rut = <input type="text" id="ya_id" size="5"><br><br>
+        Podaj punkt B: xb_rut = <input type="text" id="xb_id" size="5"> yb_rut = <input type="text" id="yb_id" size="5"><br><br>
+        Podaj punkt C: xc_rut = <input type="text" id="xc_id" size="5"> yc_rut = <input type="text" id="yc_id" size="5"><br><br>
+        
+        <input type="button" value="Oblicz AB" onclick="AB_rut()">
+        <input type="button" value="Oblicz BC" onclick="BC_rut()">
+        <input type="button" value="Oblicz AC" onclick="AC_rut()"><br><br>
+    </form>
 
-<div style="color:red;font-size:50px;"id="nazwa"></div>
+    <div id="wynik" style="color:red; font-size:25px;"></div><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()" />
 </body>
 </html>

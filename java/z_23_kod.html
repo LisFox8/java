@@ -1,0 +1,60 @@
+<html>
+<head>
+</head>
+
+<body>
+<textarea cols="90" rows="24">
+<html>
+<head>
+<title>
+obliczanie drabiny
+</title>
+<script language="JavaScript">
+function dlugosc_rut(d_rut,x_rut)
+{
+d_liczba=parseFloat(d_rut)
+x_liczba=parseFloat(x_rut)
+l_rut=d_liczba*d_liczba+x_liczba*x_liczba
+document.formularz.wyprowadz_dlugosc_rut.value=Math.sqrt(l_rut).toFixed(2);
+alert("dlugosc="+Math.sqrt(l_rut).toFixed(2)+" cm");
+pokaz1.innerHTML="dlugosc="+Math.sqrt(l_rut).toFixed(2)+" cm"+"<br>";
+}
+function kot_rut(d_rut,x_rut)
+{
+d_liczba=parseFloat(d_rut)
+x_liczba=parseFloat(x_rut)
+kot_wynik = Math.atan(d_liczba / x_liczba) * (180 / Math.PI);
+document.formularz.wyprowadz_kot_rut.value=kot_wynik.toFixed(2);
+alert("kąt="+kot_wynik.toFixed(2));
+pokaz2.innerHTML="kąt="+kot_wynik.toFixed(2);
+}
+</script>
+</head>
+<body>
+obliczanie drabiny
+<br> <br>
+<form name="formularz" action="..." onsubmit="dlugosc_rut(this.a.value,this.b.value);
+kot_rut(this.a.value,this.b.value);return false">
+Podaj wysokość oparcia drabiny w metrach=
+<input size="6" name="a">
+Podaj odległość oparcia drabiny=
+<input size="6" name="b">
+<br> <br>
+<input TYPE="submit" Value="oblicz" >
+<br> <br>
+dluogosc=
+<input size="6" name="wyprowadz_dlugosc_rut">
+kąt=
+<input size="6" name="wyprowadz_kot_rut">
+</form>
+<table>
+<tr id="pokaz1"></tr>
+<tr id="pokaz2"></tr>
+</table>
+</body>
+</html>
+
+</textarea>
+</body>
+
+</html>

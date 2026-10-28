@@ -1,0 +1,66 @@
+<html>
+<head>
+</head>
+
+<body>
+<textarea cols="90" rows="24">
+<!DOCTYPE html>
+<head>
+    <title>Zadanie 20</title>
+    <meta charset="utf-8">
+    <script>
+        function AB_rut() {
+            var xa = parseFloat(document.getElementById('xa_id').value);
+            var ya = parseFloat(document.getElementById('ya_id').value);
+            var xb = parseFloat(document.getElementById('xb_id').value);
+            var yb = parseFloat(document.getElementById('yb_id').value);
+            
+            var ab = Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+            document.getElementById('wynik').innerHTML = "Długość boku AB = " + ab.toFixed(2);
+        }
+
+        function BC_rut() {
+            var xb = parseFloat(document.getElementById('xb_id').value);
+            var yb = parseFloat(document.getElementById('yb_id').value);
+            var xc = parseFloat(document.getElementById('xc_id').value);
+            var yc = parseFloat(document.getElementById('yc_id').value);
+            
+            var bc = Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+            document.getElementById('wynik').innerHTML = "Długość boku BC = " + bc.toFixed(2);
+        }
+
+        function AC_rut() {
+            var xa = parseFloat(document.getElementById('xa_id').value);
+            var ya = parseFloat(document.getElementById('ya_id').value);
+            var xc = parseFloat(document.getElementById('xc_id').value);
+            var yc = parseFloat(document.getElementById('yc_id').value);
+            
+            var ac = Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+            document.getElementById('wynik').innerHTML = "Długość boku AC = " + ac.toFixed(2);
+        }
+
+        function okno_zamknij() {
+            window.close()
+        }
+    </script>
+</head>
+<body>
+    <h3>Obliczanie długości boków trójkąta</h3>
+    <form>
+        Podaj punkt A: xa_rut = <input type="text" id="xa_id" size="5"> ya_rut = <input type="text" id="ya_id" size="5"><br><br>
+        Podaj punkt B: xb_rut = <input type="text" id="xb_id" size="5"> yb_rut = <input type="text" id="yb_id" size="5"><br><br>
+        Podaj punkt C: xc_rut = <input type="text" id="xc_id" size="5"> yc_rut = <input type="text" id="yc_id" size="5"><br><br>
+        
+        <input type="button" value="Oblicz AB" onclick="AB_rut()">
+        <input type="button" value="Oblicz BC" onclick="BC_rut()">
+        <input type="button" value="Oblicz AC" onclick="AC_rut()"><br><br>
+    </form>
+
+    <div id="wynik" style="color:red; font-size:25px;"></div><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()" />
+</body>
+</html>
+</textarea>
+</body>
+
+</html>
