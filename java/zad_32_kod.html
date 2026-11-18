@@ -1,0 +1,52 @@
+<html>
+<head>
+</head>
+
+<body>
+<textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 32 - Rutkowski</title>
+    <script type="text/javascript">
+        function Ciezarowka(marka_r, ladownosc_r, moc_r, przebieg_r) {
+            this.marka = marka_r;
+            this.ladownosc = ladownosc_r;
+            this.moc = moc_r;
+            this.przebieg = przebieg_r;
+        }
+
+        Ciezarowka.prototype.Ciezarowka_wyswietl_rutkowski = function () {
+            alert(this.marka + ' | ' + this.ladownosc + ' | ' + this.moc + ' | ' + this.przebieg);
+        };
+
+        var auto1 = new Ciezarowka('Volvo', '24 tony', '500 KM', '150k km');
+        var auto2 = new Ciezarowka('Scania', '26 ton', '540 KM', '80k km');
+        var auto3 = new Ciezarowka('MAN', '18 ton', '440 KM', '220k km');
+
+        auto1.Ciezarowka_wyswietl_rutkowski();
+        auto2.Ciezarowka_wyswietl_rutkowski();
+        auto3.Ciezarowka_wyswietl_rutkowski();
+
+        document.write("<b>Dostęp do właściwości:</b><br>");
+        document.write("Ciężarówka pierwsza: " + auto1.marka + " " + auto1.ladownosc + " " + auto1.moc + " " + auto1.przebieg + "<br>");
+        document.write("Ciężarówka druga: " + auto2.marka + " " + auto2.ladownosc + " " + auto2.moc + " " + auto2.przebieg + "<br>");
+        document.write("Ciężarówka trzecia: " + auto3.marka + " " + auto3.ladownosc + " " + auto3.moc + " " + auto3.przebieg + "<br>");
+
+        auto1.kolor = 'Czerwony';
+        auto1.Ciezarowka_pokaz_rutkowski = function () {
+            document.write("<br>Nowe pole dla auto1 (kolor): " + this.kolor);
+        };
+        auto1.Ciezarowka_pokaz_rutkowski();
+    </script>
+</head>
+<body>
+    <br>
+    Programowanie obiektowe
+</body>
+</html>
+</textarea>
+</body>
+
+</html>

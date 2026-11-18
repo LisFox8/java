@@ -1,0 +1,46 @@
+<html>
+<head>
+</head>
+
+<body>
+<textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 31 - Rutkowski</title>
+    <script type="text/javascript">
+        var Ciezarowka = {
+            marka: 'Volvo',
+            ladownosc: '24 tony',
+            moc: '500 KM',
+            Ciezarowka_wyswietl_rutkowski: function () {
+                document.write(this.marka + ' ' + this.ladownosc + ' ' + this.moc + '<br>');
+            }
+        };
+        Ciezarowka.Ciezarowka_wyswietl_rutkowski();
+
+        Ciezarowka.przebieg = '150000 km';
+        Ciezarowka.Ciezarowka_pokaz_rutkowski = function () {
+            alert('Przebieg ciężarówki: ' + this.przebieg);
+        };
+        Ciezarowka.Ciezarowka_pokaz_rutkowski();
+    </script>
+</head>
+<body>
+    <br>
+    Programowanie obiektowe.<br>
+    Obiekt to: Ciężarówka<br>
+    Pola:<br>
+    marka<br>
+    ladownosc<br>
+    moc<br>
+    metoda: Ciezarowka_wyswietl_rutkowski<br>
+    nowe pole to: przebieg<br>
+    nowa metoda to: Ciezarowka_pokaz_rutkowski()<br>
+</body>
+</html>
+</textarea>
+</body>
+
+</html>
